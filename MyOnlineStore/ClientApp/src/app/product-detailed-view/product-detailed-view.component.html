@@ -1,0 +1,8 @@
+
+<div *ngIf="product !== undefined; else elseBlock" class="text-center">
+  <app-product-view [product]="product"></app-product-view>
+  <div>
+    {{ product.description }}
+  </div>
+</div>
+<ng-template #elseBlock>Loading</ng-template>

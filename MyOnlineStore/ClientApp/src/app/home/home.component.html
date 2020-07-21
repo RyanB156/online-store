@@ -1,0 +1,12 @@
+<h1>Welcome to MyOnlineStore</h1>
+
+<div class="ml-auto">
+  <label for="searchBox">Search</label>
+  <input class="ml-2" id="searchBox" (keyup)="searchKeyUp($event)" type="text" [(ngModel)]="searchText" />
+</div>
+
+<div class="text-center" style="max-width: 400px">
+  <h3>Featured Product</h3>
+  <app-product-view [product]="featuredProduct"></app-product-view>
+</div>
+

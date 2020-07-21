@@ -1,0 +1,9 @@
+
+<div *ngIf="product !== undefined; else elseBlock" class="bg-white" style="height: 95%">
+  <a routerLink="/product-view/{{ product.id }}" routerLinkActive="active">
+    <img class="w-100" style="max-height: 75%" src="{{ product.path }}" #image/>
+  </a>
+  <p>{{ product.name }}</p>
+  <p>${{ product.price }}</p>
+</div>
+<ng-template #elseBlock class="text-danger">Could not find a product to display</ng-template>
